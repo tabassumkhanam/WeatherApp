@@ -1,18 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/flTempLocation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/black"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Test"
+            android:textColor="@android:color/white"
+            android:textSize="50dp" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTemp"
+            android:layout_centerHorizontal="true"
+            android:text="Test"
+            android:textColor="@android:color/white"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
 
     <TextView
+        android:id="@+id/tvWindLabel"
+        style="@style/TextViewStyle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flTempLocation" />
+
+    <TextView
+        android:id="@+id/tvWindValue"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintRight_toLeftOf="@+id/tvWindLabel"
+        app:layout_constraintTop_toBottomOf="@+id/flTempLocation" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvWindLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvWindLabel" />
+
+    <TextView
+        android:id="@+id/tvPressureLabel"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <TextView
+        android:id="@+id/tvPressureValue"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintRight_toLeftOf="@+id/tvPressureLabel"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPressureLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvPressureLabel" />
+
+    <TextView
+        android:id="@+id/tvPreciptLabel"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/tvPreciptValue"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintRight_toLeftOf="@+id/tvPreciptLabel"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/tvPreciptLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvPreciptLabel" />
+
+    <TextView
+        android:id="@+id/tvCloudLabel"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <TextView
+        android:id="@+id/tvCloudValue"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.125"
+        app:layout_constraintRight_toLeftOf="@+id/tvCloudLabel"
+        app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+    <include
+        android:id="@+id/inclError"
+        layout="@layout/layout_error"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/inclLoader"
+        layout="@layout/layout_success"
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
