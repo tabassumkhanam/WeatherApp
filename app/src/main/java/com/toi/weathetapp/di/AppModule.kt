@@ -9,6 +9,8 @@ import com.toi.weathetapp.utils.ConstantsUtils.Companion.HTTP_READ_TIMEOUT
 import com.toi.weathetapp.utils.InternetConnectionManager
 import dagger.Module
 import dagger.Provides
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -23,6 +25,9 @@ import javax.inject.Singleton
 
 @Module(includes = [(ViewModelModule::class)])
 class AppModule {
+
+    val mainDispatcher: CoroutineDispatcher = Dispatchers.Main
+    val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 
     @Singleton
     @Provides
