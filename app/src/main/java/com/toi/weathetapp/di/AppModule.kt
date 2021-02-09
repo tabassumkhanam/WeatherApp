@@ -4,6 +4,8 @@ import android.app.Application
 import android.content.Context
 import com.toi.weathetapp.BuildConfig
 import com.toi.weathetapp.network.WebApiInterface
+import com.toi.weathetapp.repositories.INetworkSource
+import com.toi.weathetapp.repositories.NetworkSourceImpl
 import com.toi.weathetapp.utils.ConstantsUtils.Companion.HTTP_CONNECT_TIMEOUT
 import com.toi.weathetapp.utils.ConstantsUtils.Companion.HTTP_READ_TIMEOUT
 import com.toi.weathetapp.utils.InternetConnectionManager
@@ -99,4 +101,21 @@ class AppModule {
         return InternetConnectionManager(context)
     }
 
+    @Provides
+    @Singleton
+    fun provideNetworkSource(networkSourceImpl: NetworkSourceImpl): INetworkSource {
+        return networkSourceImpl
+    }
+
+    @Provides
+    @Named("IO")
+    fun provideIOCoroutineDispatcher(): CoroutineDispatcher {
+        return Dispatchers.IO
+    }
+
+    @Provides
+    @Named("MAIN")
+    fun provideMainCoroutineDispatcher(): CoroutineDispatcher {
+        return Dispatchers.Main
+    }
 }

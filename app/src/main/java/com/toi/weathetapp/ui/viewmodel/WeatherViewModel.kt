@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.toi.weathetapp.model.ResultData
 import com.toi.weathetapp.network.Resource
 import com.toi.weathetapp.repositories.INetworkSource
+import com.toi.weathetapp.utils.InternetConnectionManager
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -27,7 +28,6 @@ class WeatherViewModel @Inject constructor(
 
     fun getWeatherDataForCurrentLocation(accessKey: String, query: String) {
         weatherLiveData.postValue(Resource.loading(null))
-        val headerMap = HashMap<String, Any>()
         viewModelScope.launch {
             withContext(ioDispatcher) {
                 val responseData = repository.getCurrentLocationTemp(accessKey, query)

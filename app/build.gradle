@@ -49,6 +49,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -70,4 +71,13 @@ dependencies {
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinCoroutineVersion")
+    testImplementation("android.arch.core:core-testing:$junitVersion")
+    testImplementation("androidx.arch.core:core-testing:$junitVersion")
+    androidTestImplementation("androidx.test.ext:junit:$junitVersion")
+    testImplementation("org.mockito:mockito-core:$mockitoVersion")
+    androidTestImplementation("org.mockito:mockito-android:$mockitoVersion")
+    testImplementation("com.squareup.okhttp3:mockwebserver:$okhttpVersion")
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlin"
 }

@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">WeathetApp</string>
     <string name="app_key">532d06c031a2964db3ff303778b1f362</string>
+    <string name="enable_gps">Enable gps</string>
+    <string name="loaction_msg">Require for this app</string>
+    <string name="enable_now">Enable now</string>
+    <string name="internet_connection_error_message">Internet connection is not available.</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="pressure">Pressure</string>
+    <string name="precipt">Precipt</string>
+    <string name="cloud_cover">Cloud Cover</string>
 </resources>
