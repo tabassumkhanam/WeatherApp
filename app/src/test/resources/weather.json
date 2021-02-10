@@ -1,0 +1,41 @@
+{
+  "request": {
+    "type": "City",
+    "query": "Uttar Pradesh",
+    "language": "en",
+    "unit": "m"
+  },
+  "location": {
+    "name": "Noida",
+    "country": "India",
+    "region": "Uttar Pradesh",
+    "lat": "28.570",
+    "lon": "77.320",
+    "timezone_id": "Asia\/Kolkata",
+    "localtime": "2021-02-10 15:29",
+    "localtime_epoch": 1612970940,
+    "utc_offset": "5.50"
+  },
+  "current": {
+    "observation_time": "09:59 AM",
+    "temperature": 28,
+    "weather_code": 113,
+    "weather_icons": [
+      "https:\/\/assets.weatherstack.com\/images\/wsymbols01_png_64\/wsymbol_0001_sunny.png"
+    ],
+    "weather_descriptions": [
+      "Sunny"
+    ],
+    "wind_speed": 3,
+    "wind_degree": 222,
+    "wind_dir": "SW",
+    "pressure": 1012,
+    "precip": 0,
+    "humidity": 26,
+    "cloudcover": 0,
+    "feelslike": 27,
+    "uv_index": 7,
+    "visibility": 10,
+    "is_day": "yes"
+  }
+}
